@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
+import Avatar from './Avatar';
+import firebase from 'firebase/app';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -19,7 +21,10 @@ const useStyles = makeStyles((theme) => ({
 
 export default function ButtonAppBar() {
   const classes = useStyles();
-
+  const [loggedIn, change] = useState(firebase.auth().currentUser ? true : false);
+  firebase.auth().onAuthStateChanged((user) => {
+    change(user ? true : false);
+  });
   return (
     <div className={classes.root}>
       <AppBar position="static">
@@ -27,7 +32,7 @@ export default function ButtonAppBar() {
           <Typography variant="h6" className={classes.title}>
             Smart Parking
           </Typography>
-          <Button color="inherit">Login</Button>
+          {loggedIn ? <Avatar /> :<a href="/login" className="reset-a"><Button color="inherit">Login</Button></a>}
         </Toolbar>
       </AppBar>
     </div>
