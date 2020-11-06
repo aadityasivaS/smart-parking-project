@@ -7,6 +7,9 @@ export default function Home() {
         change(user ? true : false);
     });
     return <div>
-        {loggedIn ? window.location.href = "/app" : <AppBar/>}
+        {loggedIn ? window.location.href = "/app" : <div>
+            <AppBar />
+            <h1 className="log-in-text">Please log in to continue</h1>
+        </div>}
     </div>
 }
