@@ -31,7 +31,7 @@ export default function LetterAvatars() {
           buttons: [
             {
               label: 'Yes',
-              onClick: () => firebase.auth().signOut()
+              onClick: () => {firebase.auth().signOut(); window.location.href = '/'}
             },
             {
               label: 'No',

@@ -1,12 +1,13 @@
-import React, {useState} from 'react';
+import React from 'react';
 import AppBar from './AppBar';
-import firebase from 'firebase/app';
+import Buttons from './Buttons';
 export default function Main() {
-    const [loggedIn, change] = useState(firebase.auth().currentUser ? true : false);
-    firebase.auth().onAuthStateChanged((user) => {
-        change(user ? true : false);
-    });
     return <div>
-        {loggedIn ? <AppBar /> : window.location.href = '/'}
+        <AppBar />
+        <Buttons bookClicked={() => {
+            window.location.href = "/bookingStatus";
+        }} myBookingClicked={() => {
+
+        }}/>
     </div>
 }
