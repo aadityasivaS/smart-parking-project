@@ -26,6 +26,9 @@ export default function Slot1() {
                                         database.ref('SlotStatus/Compound2').update({
                                             Slot2: false
                                         });
+                                        database.ref('CarNumber/' + carNumber).set({
+                                            number: carNumber
+                                        });
                                     }).then(() => {
                                         window.location.href = '/app';
                                     });

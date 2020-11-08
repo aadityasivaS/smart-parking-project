@@ -8,6 +8,7 @@ import Slot1 from './SlotsBooking/Slot1';
 import Slot2 from './SlotsBooking/Slot2';
 import Slot3 from './SlotsBooking/Slot3';
 import Slot4 from './SlotsBooking/Slot4';
+import UsersBookings from './UsersBookings';
 function App() {
   return (
     <div className="App">
@@ -21,6 +22,7 @@ function App() {
           <Route path="/slot2" exact component={() => <Slot2 />}/>
           <Route path="/slot3" exact component={() => <Slot3 />}/>
           <Route path="/slot4" exact component={() => <Slot4 />}/>
+          <Route path="/my-bookings" exact component={() => <UsersBookings />}/>
         </Switch>
       </Router>
     </div>

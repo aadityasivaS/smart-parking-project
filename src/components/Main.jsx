@@ -7,7 +7,7 @@ export default function Main() {
         <Buttons bookClicked={() => {
             window.location.href = "/bookingStatus";
         }} myBookingClicked={() => {
-
+            window.location.href = "/my-bookings";
         }}/>
     </div>
 }
