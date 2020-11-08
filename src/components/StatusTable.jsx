@@ -40,13 +40,13 @@ export default function StatusTable() {
                 }}>Book</button> : 'Booked'}</td>
             </tr>
             <tr>
-                <th scope="row">(Compound 1) slot 1</th>
+                <th scope="row">(Compound 2) slot 1</th>
                 <td>{compounds.Compound2.Slot1 ? <button type="button" className="btn btn-primary" onClick={() => {
                     window.location.href = '/slot3';
                 }}>Book</button> : 'Booked'}</td>
             </tr>
             <tr>
-                <th scope="row">(Compound 1) slot 1</th>
+                <th scope="row">(Compound 2) slot 2</th>
                 <td>{compounds.Compound2.Slot2 ? <button type="button" className="btn btn-primary" onClick={() => {
                     window.location.href = '/slot4';
                 }}>Book</button> : 'Booked'}</td>
