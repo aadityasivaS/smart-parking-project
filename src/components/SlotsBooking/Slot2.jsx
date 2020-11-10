@@ -10,7 +10,7 @@ export default function Slot1() {
     return <div>
         <AskPlateNumber onClick={() => {
             confirmAlert({
-                title: 'Are youy sure?',
+                title: 'Are you sure?',
                 message: 'Are you sure you want to book Slot2',
                 buttons: [
                     {
